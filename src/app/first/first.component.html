@@ -1,3 +1,8 @@
-<p>
-  first works!
-</p>
+<div class="alert alert-danger"> {{name}} </div>
+<p #monParagraphe [hidden]="getIsShown()"> bONJOUR LE MONDE</p>
+
+<button (click)="toogle(monParagraphe)" class="btn btn-primary">
+  {{message}}
+</button>
+<div>Div de test</div>
+<app-second></app-second>
