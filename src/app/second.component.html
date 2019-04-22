@@ -2,4 +2,6 @@
   Bonjour Second component
 </div>
 
-<input type="color" #colorInput (change)="changeColor(colorInput.value)">
+<input type="text" [(ngModel)]="bgColor">
+
+contenu de bgColor : {{bgColor}}

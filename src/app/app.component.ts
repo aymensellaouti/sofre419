@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'aymen sellaouti';
+  processSonData(data) {
+    alert(data.message);
+    console.log(data.couleur1);
+  }
 }
