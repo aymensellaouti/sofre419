@@ -16,6 +16,9 @@ import { StyleComponent } from './directive/style/style.component';
 import { ClasseComponent } from './directive/classe/classe.component';
 import { HoghlightDirective } from './directive/hoghlight.directive';
 import { RainbowDirective } from './directive/rainbow.directive';
+import { DefaultImagePipe } from './pipes/default-image.pipe';
+import {TodoService} from './todo.service';
+import { TodoComponent } from './todo/todo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +33,9 @@ import { RainbowDirective } from './directive/rainbow.directive';
     StyleComponent,
     ClasseComponent,
     HoghlightDirective,
-    RainbowDirective
+    RainbowDirective,
+    DefaultImagePipe,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
