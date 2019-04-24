@@ -1,0 +1,11 @@
+div  {
+  width: 150px;
+  height: 150px;
+  border: black 1px solid;
+  margin: 50px;
+}
+
+.eteinte {
+  color: white;
+  background-color: #333333;
+}

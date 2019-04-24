@@ -1,0 +1,20 @@
+<p [ngStyle]="{
+'color': color,
+'fontSize': taille + 'px',
+'fontFamily': police
+}">
+  style works!
+</p>
+
+<input type="color" class="form-control" [(ngModel)]="color">
+<input
+  type="number"
+  class="form-control"
+  #tailleInput
+  [(ngModel)]="taille"
+  (change)="changeSize(tailleInput.value)">
+<select name="" id="" class="form-control" [(ngModel)]="police">
+  <option value="verdana">verdana</option>
+  <option value="garamond">garamond</option>
+  <option value="arial">arial</option>
+</select>

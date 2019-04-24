@@ -1,4 +1,6 @@
 <ol class="list-group">
-  <app-item (sendPersonne)="processItem($event)" [personne]="personnes[0]"></app-item>
-  <app-item (sendPersonne)="processItem($event)" [personne]="personnes[1]"></app-item>
+  <app-item
+    *ngFor="let personne of personnes"
+    (sendPersonne)="processItem($event)"
+    [personne]="personne"></app-item>
 </ol>

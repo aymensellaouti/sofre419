@@ -12,6 +12,10 @@ import { CvComponent } from './cvTech/cv/cv.component';
 import { ListComponent } from './cvTech/list/list.component';
 import { ItemComponent } from './cvTech/item/item.component';
 import { DetailComponent } from './cvTech/detail/detail.component';
+import { StyleComponent } from './directive/style/style.component';
+import { ClasseComponent } from './directive/classe/classe.component';
+import { HoghlightDirective } from './directive/hoghlight.directive';
+import { RainbowDirective } from './directive/rainbow.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,11 @@ import { DetailComponent } from './cvTech/detail/detail.component';
     CvComponent,
     ListComponent,
     ItemComponent,
-    DetailComponent
+    DetailComponent,
+    StyleComponent,
+    ClasseComponent,
+    HoghlightDirective,
+    RainbowDirective
   ],
   imports: [
     BrowserModule,

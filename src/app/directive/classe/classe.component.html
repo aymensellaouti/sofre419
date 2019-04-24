@@ -1,0 +1,12 @@
+<input type="text" class="form-control" appRainbow>
+
+<p appHoghlight>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolore eius facere id laboriosam maxime nemo officiis perspiciatis porro praesentium quidem saepe, tempora, velit? Alias doloremque minima qui repudiandae voluptatibus!
+</p>
+<div [ngClass]="{'eteinte': isEteinte}">
+  Lampe
+</div>
+
+<button class="btn btn-dark" (click)="isEteinte = !isEteinte">
+  Allumer/Eteindre
+</button>
