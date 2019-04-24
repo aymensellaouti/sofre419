@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Personne} from '../../Model/personne.model';
 
 @Component({
@@ -8,6 +8,7 @@ import {Personne} from '../../Model/personne.model';
 })
 export class ListComponent implements OnInit {
   personnes: Personne[] = [];
+  @Output() sendPersonneFromList = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
@@ -15,6 +16,11 @@ export class ListComponent implements OnInit {
       new Personne(1, 'sellaouti', 'aymen', 'teacher', 'zizou.jpeg', 123456, 36),
       new Personne(2, 'test', 'test', 'everything', 'zizou.jpeg', 4444, 26)
     ];
+  }
+  processItem(personne) {
+    this.sendPersonneFromList.emit(
+      personne
+    );
   }
 
 }
