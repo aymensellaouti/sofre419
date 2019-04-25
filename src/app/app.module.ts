@@ -23,6 +23,8 @@ import { EmbaucheComponent } from './cvTech/embauche/embauche.component';
 import { HeaderComponent } from './header/header.component';
 import { DetailCvComponent } from './detail-cv/detail-cv.component';
 import { NotFound404Component } from './not-found404/not-found404.component';
+import { LoginComponent } from './login/login.component';
+import { ObservablesComponent } from './observables/observables/observables.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,9 @@ import { NotFound404Component } from './not-found404/not-found404.component';
     EmbaucheComponent,
     HeaderComponent,
     DetailCvComponent,
-    NotFound404Component
+    NotFound404Component,
+    LoginComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,

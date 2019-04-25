@@ -6,6 +6,7 @@ import {DetailCvComponent} from './detail-cv/detail-cv.component';
 import {FirstComponent} from './first/first.component';
 import {StyleComponent} from './directive/style/style.component';
 import {NotFound404Component} from './not-found404/not-found404.component';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
   {path: 'cv', children: [
@@ -16,6 +17,7 @@ const routes: Routes = [
   },
   {path: '', redirectTo: 'cv', pathMatch: 'full'},
   {path: 'todo', component: TodoComponent},
+  {path: 'login', component: LoginComponent},
   {path: '**', component: NotFound404Component},
 ];
 
