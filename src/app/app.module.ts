@@ -22,6 +22,7 @@ import { TodoComponent } from './todo/todo.component';
 import { EmbaucheComponent } from './cvTech/embauche/embauche.component';
 import { HeaderComponent } from './header/header.component';
 import { DetailCvComponent } from './detail-cv/detail-cv.component';
+import { NotFound404Component } from './not-found404/not-found404.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { DetailCvComponent } from './detail-cv/detail-cv.component';
     TodoComponent,
     EmbaucheComponent,
     HeaderComponent,
-    DetailCvComponent
+    DetailCvComponent,
+    NotFound404Component
   ],
   imports: [
     BrowserModule,
