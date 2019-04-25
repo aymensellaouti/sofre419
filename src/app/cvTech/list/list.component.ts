@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Personne} from '../../Model/personne.model';
 import {CvService} from '../cv.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -11,7 +12,8 @@ export class ListComponent implements OnInit {
   personnes: Personne[] = [];
   @Output() sendPersonneFromList = new EventEmitter();
   constructor(
-    private cvService: CvService
+    private cvService: CvService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -21,6 +23,10 @@ export class ListComponent implements OnInit {
     this.sendPersonneFromList.emit(
       personne
     );
+  }
+
+  goToTodo() {
+    this.router.navigate(['todo']);
   }
 
 }

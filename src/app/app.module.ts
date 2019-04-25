@@ -20,6 +20,8 @@ import { DefaultImagePipe } from './pipes/default-image.pipe';
 import {TodoService} from './todo.service';
 import { TodoComponent } from './todo/todo.component';
 import { EmbaucheComponent } from './cvTech/embauche/embauche.component';
+import { HeaderComponent } from './header/header.component';
+import { DetailCvComponent } from './detail-cv/detail-cv.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,9 @@ import { EmbaucheComponent } from './cvTech/embauche/embauche.component';
     RainbowDirective,
     DefaultImagePipe,
     TodoComponent,
-    EmbaucheComponent
+    EmbaucheComponent,
+    HeaderComponent,
+    DetailCvComponent
   ],
   imports: [
     BrowserModule,
