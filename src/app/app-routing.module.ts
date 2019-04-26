@@ -8,11 +8,16 @@ import {StyleComponent} from './directive/style/style.component';
 import {NotFound404Component} from './not-found404/not-found404.component';
 import {LoginComponent} from './login/login.component';
 import {AddPersonneComponent} from './cvTech/add-personne/add-personne.component';
+import {LoginGuard} from './guards/login.guard';
 
 const routes: Routes = [
   {path: 'cv', children: [
       {path: '', component: CvComponent},
-      {path: 'add', component: AddPersonneComponent},
+      {
+        path: 'add',
+        component: AddPersonneComponent,
+        canActivate: [LoginGuard]
+      },
       {path: ':id', component: DetailCvComponent},
       ]
   },

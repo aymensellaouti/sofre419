@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {LoginService} from '../login.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,8 @@ import {Router} from '@angular/router';
 export class HeaderComponent implements OnInit {
   link = '';
   constructor(
-    private router: Router
+    private router: Router,
+    public loginService: LoginService
   ) { }
 
   ngOnInit() {
@@ -17,6 +19,9 @@ export class HeaderComponent implements OnInit {
   goToRoute() {
     const link = [this.link];
     this.router.navigate(link);
+  }
+  logout() {
+    this.loginService.logout();
   }
 
 }

@@ -29,6 +29,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AddPersonneComponent } from './cvTech/add-personne/add-personne.component';
 import {LoginInterceptorProvider} from './interceptors/login.interceptor';
 import { AutocompleteComponent } from './cvTech/autocomplete/autocomplete.component';
+import {LoginGuard} from './guards/login.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +63,8 @@ import { AutocompleteComponent } from './cvTech/autocomplete/autocomplete.compon
     HttpClientModule
   ],
   providers: [
-    LoginInterceptorProvider
+    LoginInterceptorProvider,
+    LoginGuard
   ],
   bootstrap: [AppComponent]
 })
