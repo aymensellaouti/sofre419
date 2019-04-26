@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Personne} from '../Model/personne.model';
 import {Observable} from 'rxjs';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 
 const link = 'http://localhost:3000/api/personnes';
 @Injectable({
@@ -32,5 +32,10 @@ export class CvService {
   }
   addPersonne(personne: Personne) {
     return this.http.post(link, personne);
+  }
+  findByNameLike(chaine): Observable<Personne[]> {
+    const filter = `{"where":{"name":{"like":"%${chaine}%"}}}`;
+    const params = new HttpParams().set('filter', filter);
+    return this.http.get<Personne[]>(link, {params});
   }
 }

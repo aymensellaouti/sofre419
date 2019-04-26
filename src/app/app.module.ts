@@ -28,6 +28,7 @@ import { ObservablesComponent } from './observables/observables/observables.comp
 import {HttpClientModule} from '@angular/common/http';
 import { AddPersonneComponent } from './cvTech/add-personne/add-personne.component';
 import {LoginInterceptorProvider} from './interceptors/login.interceptor';
+import { AutocompleteComponent } from './cvTech/autocomplete/autocomplete.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import {LoginInterceptorProvider} from './interceptors/login.interceptor';
     NotFound404Component,
     LoginComponent,
     ObservablesComponent,
-    AddPersonneComponent
+    AddPersonneComponent,
+    AutocompleteComponent
   ],
   imports: [
     BrowserModule,
