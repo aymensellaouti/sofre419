@@ -25,6 +25,8 @@ import { DetailCvComponent } from './detail-cv/detail-cv.component';
 import { NotFound404Component } from './not-found404/not-found404.component';
 import { LoginComponent } from './login/login.component';
 import { ObservablesComponent } from './observables/observables/observables.component';
+import {HttpClientModule} from '@angular/common/http';
+import { AddPersonneComponent } from './cvTech/add-personne/add-personne.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,12 +49,14 @@ import { ObservablesComponent } from './observables/observables/observables.comp
     DetailCvComponent,
     NotFound404Component,
     LoginComponent,
-    ObservablesComponent
+    ObservablesComponent,
+    AddPersonneComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,7 +17,15 @@ export class ListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.personnes = this.cvService.getPersonnes();
+    this.cvService.getPersonnes().subscribe(
+      (personnes) => {
+        this.personnes = personnes;
+      },
+      (erreur) => {
+        this.personnes = this.cvService.getFakePersonnes();
+        alert('Data are fake problem with Api');
+      }
+    );
   }
   processItem(personne) {
     this.sendPersonneFromList.emit(

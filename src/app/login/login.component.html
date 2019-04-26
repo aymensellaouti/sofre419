@@ -1,4 +1,7 @@
 <form #formulaire = "ngForm">
+  <div class="alert alert-danger" *ngIf="message.length">
+    {{message}}
+  </div>
   <label for="email">E-mail</label>
   <div
     *ngIf="email.invalid && email.touched"
