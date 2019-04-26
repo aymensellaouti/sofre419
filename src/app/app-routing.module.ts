@@ -7,11 +7,12 @@ import {FirstComponent} from './first/first.component';
 import {StyleComponent} from './directive/style/style.component';
 import {NotFound404Component} from './not-found404/not-found404.component';
 import {LoginComponent} from './login/login.component';
+import {AddPersonneComponent} from './cvTech/add-personne/add-personne.component';
 
 const routes: Routes = [
   {path: 'cv', children: [
       {path: '', component: CvComponent},
-      {path: 'style', component: StyleComponent},
+      {path: 'add', component: AddPersonneComponent},
       {path: ':id', component: DetailCvComponent},
       ]
   },

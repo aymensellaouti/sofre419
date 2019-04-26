@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   login(formulaire: NgForm) {
     this.loginService.login(formulaire.value).subscribe(
       (reponse) => {
-        localStorage.setItem('token', reponse.id);
+        localStorage.setItem('token', reponse['id']);
         this.message = '';
         this.router.navigate(['']);
         },

@@ -27,6 +27,7 @@ import { LoginComponent } from './login/login.component';
 import { ObservablesComponent } from './observables/observables/observables.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AddPersonneComponent } from './cvTech/add-personne/add-personne.component';
+import {LoginInterceptorProvider} from './interceptors/login.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +59,9 @@ import { AddPersonneComponent } from './cvTech/add-personne/add-personne.compone
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    LoginInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
